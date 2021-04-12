@@ -7,6 +7,7 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Remember Me')
     submit = SubmitField('Login')
 
+#Not used yet
 class PCForm(FlaskForm):
     reported_file = FileField('Reported Document',validators=[])
     suspected_files = FileField('Suspected Document', validators=[])
