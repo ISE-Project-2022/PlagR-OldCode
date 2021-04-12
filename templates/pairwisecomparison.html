@@ -2,6 +2,24 @@
 {% block content %}
     <h1>Pairwise Comparison Page</h1>
     <body>
-        This is the page for the Pairwise Comparison function. Request.
+        <form action ={{ url_for('PCTool') }} method = "POST"  enctype = "multipart/form-data">
+         <input type = "file" name = "Reported_Document" />
+         <input type = "file" name = "Suspected_Documents" />
+         <input type = "submit"/>
+      </form>
+        <div>
+        <pre class="article-content">
+            {%  for i in reported %}
+                {{ i }}
+            {% endfor %}
+        </pre>
+        </div>
+        <div>
+        <pre class="article-content">
+            {%  for i in suspects %}
+                {{ i }}
+            {% endfor %}
+        </pre>
+        </div>
     </body>
 {% endblock content %}
